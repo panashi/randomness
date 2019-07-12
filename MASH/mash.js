@@ -1,5 +1,5 @@
 let livingSit = ["Mansion", "Apartment", "Shack", "House"];
-
+prob = 2
 //Gives arandom value of an index in LivingSit
 function rand(){
     const decimal = Math.random();
@@ -16,17 +16,14 @@ function getHome(){
 }
 
 function getkids(){
-    const decimal = Math.random();
-    const times10 = decimal * 100;
-    const final = Math.floor(times10);
-        if(final == 0){
-            return 1
-        }
-        else{
-            console.log(process.argv[2]);
-        }
-    return final
+    oat = Math.floor(Math.random() * 1);
+    if(oat == 0){
+        return Math.floor(Math.random() * 100);
+    } else {
+        return process.argv[2]
+    }
 }
+
 function mash(){
     return `You will live in a ${getHome()} and have ${getkids()} kids`;
     
